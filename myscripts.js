@@ -18,13 +18,16 @@ while (conta == 0){
     document.write("Prezzo del biglietto: "+ prezzo.toFixed(2));
     document.write("<br>");
 
-    
-    var risp = prompt("vuole un altro biglietto? si/no");
-    if(risp === "si"){
-
-    } else if(risp === "no"){
-        conta++;
-    } else{
-        alert("Deve rispondere con si o no");
+    var risposta = 0;
+    while(risposta === 0){
+        var risp = prompt("vuole un altro biglietto? si/no");
+        if(risp == "si"){
+            risposta++;
+        } else if(risp == "no"){
+            risposta++;
+            conta++;
+        } else{
+            alert("Deve rispondere con si o no");
+        }
     }
 }
